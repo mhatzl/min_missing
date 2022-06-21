@@ -13,3 +13,7 @@ index `x` if `x` is a value in `a`.
 The lowest index in `b` that remains `false` after all values in `a` were iterated
 is the minimal missing number. If no index in `b` is `false`, `a` contained all
 values `0 .. a'Length - 1`. In this case, the next highest number being the length of `a` is returned.
+
+**Note:** The `Small_Natural` type is needed to safely return the length as `Natural` of the array as result in case
+no number is missing in the given array. Without this type, the array length could exceed the maximum number that
+can be represented by `Natural`.
